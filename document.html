@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentations : Base de données</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+  <nav>
+    <a href="index.html">Tableau de bord</a>
+    <a href="newletter.html">Newletter</a>
+    <a href="signaler.html">Signaler</a>
+    <a href="forum.html">Forum</a>
+    <a href="document.html">Documentations</a>
+    <a href="contact.html">Contacts</a>
+    <a href="soutien.html">Soutien</a>
+    <a href="admin.html">Panneau d'administration</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Documentations</h1>
+  
+  <fieldset>
+  <legend>Importation</legend>
+  
+  <form action="document.php" method="post">
+  <input type="file" name="document" required>
+
+<input type="text" name="auteur" placeholder="Auteur" required>
+
+<label for="type"></label>
+<select id="type" name="type" required>
+  <option value="" disabled selected>Type de du document</option>
+  <option value="livre">Livre</option>
+  <option value="memoire">Memoire</option>
+  <option value="article">Article</option>
+  <option value="autre">Autre type</option>
+</select>
+<br>
+
+ <input type="submit" value="Importer le fichier">
+  </form>
+ </fieldset>
+  
+  <br><br>
+ 
+  <fieldset>
+    <legend>Documents</legend>
+ <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titre</th>
+      <th>Auteur</th>
+      <th>Type</th>
+      <th>Nb de téléchargements</th>
+      <th>Note</th>
+      <th>Mise en ligne</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="#">rapport du 23/06/21</a></td>
+      <td>INF</td>
+      <td>Autre type</td>
+      <td>4</td>
+      <td>3.5/5</td>
+      <td>26-02-2023</td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td><a href="#">Liberté des de la femme</a></td>
+      <td>UNICEF</td>
+      <td>Livre</td>
+      <td>9</td>
+      <td>2/5</td>
+      <td>28-02-2023</td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td><a href="#">Harcèlement sexuel et conséquences : Cas de l'université d'Abomey Calavi</a></td>
+      <td>Chantal GLEGBENOU</td>
+      <td>Mémoire</td>
+      <td>108</td>
+      <td>4.5/5</td>
+      <td>06-03-2023</td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+    </tr>
+    
+    <tr>
+      <td>4</td>
+      <td><a href="#">Et si on en parlait ?</a></td>
+      <td>Journal la Croix</td>
+      <td>Article</td>
+       <td>6</td>
+      <td>2/5</td>
+      <td>19-03-2023</td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+    </tr>
+    
+  </tbody>
+</table>
+</fieldset>
+
+</main>
+
+<footer>
+  <p>mìɖɔ : Base de données</p>
+</footer>
+
+</body>
+</html>

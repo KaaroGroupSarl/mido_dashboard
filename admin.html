@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panneau d'administration  : Base de données</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+  <nav>
+    <a href="index.html">Tableau de bord</a>
+    <a href="newletter.html">Newletter</a>
+    <a href="signaler.html">Signaler</a>
+    <a href="forum.html">Forum</a>
+    <a href="document.html">Documentations</a>
+    <a href="contact.html">Contacts</a>
+    <a href="soutien.html">Soutien</a>
+    <a href="admin.html">Panneau d'administration</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Panneau d'administration</h1>
+
+<fieldset>
+  <legend>Profil du compte </legend>
+
+  <table id="profil">
+    <tr>
+      <td>Prénoms :</td>
+      <td>Richo Marc</td>
+    </tr>
+    
+     <tr>
+      <td>Noms :</td>
+      <td>LAGBENOU</td>
+    </tr>
+    
+     <tr>
+       <td>Adresse email :</td>
+       <td>richo@gmail.com</td>
+     </tr>
+     
+      <tr>
+      <td>Rôle :</td>
+      <td>Principal</td>
+    </tr>
+</table>
+<br>
+
+<div id="profil-but">
+<form action="profil-admin" method="POST">
+    <input type="button" value="Modifier informations du compte" onclick="afficherInfos()">
+    <br><br>
+ 
+  <input type="text" id="prenom" name="prenom" style="display:none" placeholder="Prénom(s)">
+
+  <input type="text" id="nom" name="nom" style="display:none" placeholder="Nom">
+  <br><br>
+
+  <input type="email" id="email" name="email" style="display:none" placeholder="Adresse email">
+
+
+  <label for="role" id="labelRole" style="display:none"></label>
+  <select id="role" name="role" style="display:none">
+    <option value="" disabled selected>Rôle</option>
+    <option value="principal">Principal</option>
+    <option value="admin">Administrateur</option>
+    <option value="assistant">Assistant</option>
+    <option value="editeur">Editeur</option>
+  </select>
+  <br><br>
+  
+   <div id="boutonsModifInfos" style="display:none">
+    <input type="submit" value="Accepter modifications" onclick="enregistrerModificationsInfos()">
+    <input type="button" value="Annuler modifications" onclick="annulerModificationsInfos()">
+  </div>
+</form>
+<br><br>
+ 
+<form action="password-admin" method="POST">
+  <input type="button" value="Modifier mot de passe" onclick="afficherPassword()">
+ <br><br>
+ 
+  <input type="password" id="motdepasse" name="motdepasse" style="display:none" placeholder="Nouveau mot de passe">
+  
+  <input type="password" id="confirmermotdepasse" name="confirmermotdepasse" style="display:none" placeholder="Confirmer mot de passe">
+  <br><br>
+  
+  <div id="boutonsModifPassword" style="display:none">
+    <input type="submit" value="Changer mot de passe" onclick="enregistrerModificationsPassword()">
+    <input type="button" value="Refuser mot de" onclick="annulerModificationsPassword()">
+  </div>
+ </form>
+</div>
+</fieldset>
+<br>
+
+<fieldset>
+  <legend>Gestion des administrateurs</legend>
+    <form action="new-admin" method="POST">
+    <input type="button" value="Ajouter un administrateur" onclick="afficherNew()">
+    <br><br>
+ 
+  <input type="text" id="prenom-new" name="prenom" style="display:none" placeholder="Prénom(s)">
+
+  <input type="text" id="nom-new" name="nom" style="display:none" placeholder="Nom">
+  <br><br>
+
+  <input type="email" id="email-new" name="email" style="display:none" placeholder="Adresse email">
+
+  <label for="role-new" id="labelRole-new" style="display:none"></label>
+  <select id="role-new" name="role-new" style="display:none">
+    <option value="" disabled selected>Rôle</option>
+    <option value="principal">Principal</option>
+    <option value="admin">Administrateur</option>
+    <option value="assistant">Assistant</option>
+    <option value="editeur">Editeur</option>
+  </select>
+  <br><br>
+  
+   <div id="boutonsNew" style="display:none">
+    <input type="submit" value="Confirmer l'ajout" onclick="enregistrerNew()">
+    <input type="button" value="Annuler l'ajout" onclick="annulerNew()">
+  </div>
+</form>
+
+ </form>
+  <br>
+  
+  <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Prénoms</th>
+      <th>Nom</th>
+      <th>Adresse email</th>
+      <th>Rôle</th>
+      <th colspan="3">Actions</th>
+      <th>Date d'ajout</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Richo Marc</td>
+      <td>LAGBENOU</td>
+      <td>richo@gmail.com</td>
+      <td>Principal</td>
+      <td><a href="#"><img src="images/ico_edit.png" width="36px" class="action"></a></td>
+      <td><a href="#"><img src="images/ico_stop.png" width="36px" class="action"></a></td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+      <td>16-01-2023</td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td>Steven Asterix</td>
+      <td>AFFOMAGBA</td>
+      <td>asto@gmail.com</td>
+      <td>Admin</td>
+      <td><a href="#"><img src="images/ico_edit.png" width="36px" class="action"></a></td>
+      <td><a href="#"><img src="images/ico_stop.png" width="36px" class="action"></a></td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+      <td>03-02-2023</td>
+    </tr>
+    
+    <tr>
+      <td>3</td>
+      <td>Denis Dounias</td>
+      <td>HOUNKANRIN</td>
+      <td>denis@gmail.com</td>
+      <td>Assistant</td>
+      <td><a href="#"><img src="images/ico_edit.png" width="36px" class="action"></a></td>
+      <td><a href="#"><img src="images/ico_stop.png" width="36px" class="action"></a></td>
+      <td><a href="#"><img src="images/ico_poubelle.png" width="36px" class="action"></a></td>
+      <td>03-02-2023</td>
+    </tr>
+    
+  </tbody>
+</table>
+</fieldset>
+
+</main>
+
+<footer>
+  <p>mìɖɔ : Base de données</p>
+</footer>
+
+  <script src="src/admin.js"></script>
+</body>
+</html>
