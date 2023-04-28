@@ -1,0 +1,230 @@
+ :root {
+  --primary-color: #0055a4;
+  --secondary-color: #000000;
+  --intermediare-color: #fec949;
+  --accent-color: #1e81fb;
+  --text-color: #333333;
+  --nav-hover: #0374dd;
+  --intermediare-hover: #d0b312;
+  --back-color: #e4eef9
+}
+
+/*----------*/ /*----------*/
+/*----------*/ /*----------*/
+
+/*----- HEADER & FOOTER -----*/
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color : var(--nav-hover);
+  color: var(--intermediare-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px ;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/*----------*/ /*----------*/
+/*----------*/ /*----------*/
+
+/*----- GENERAL -----*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+}
+
+p {
+  text-align: center;
+}
+
+h2,
+legend {
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+
+a {
+  color: blue;
+}
+
+/*----------*/ /*----------*/
+/*----------*/ /*----------*/
+
+/*----- TABLEAU -----*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.action:hover {
+  background-color: var(--back-color);
+}
+
+/*----------*/ /*----------*/
+/*----------*/ /*----------*/
+
+/*----- FORMULAIRE -----*/
+form {
+  text-align: center;
+}
+
+input[type="file"],
+[type="text"],
+[type="email"],
+[type="password"],
+#type,
+#role,
+#role-new {
+  width: 25%;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 0px;
+  font-size: 1rem;
+  margin: auto 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: var(--nav-hover);
+}
+
+input[type="button"] {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+
+/*----------*/ /*----------*/
+/*----------*/ /*----------*/
+
+/*----- TABLEAU DE BORD -----*/
+#block {
+  display: flex;
+}
+
+#block section {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--back-color);
+  width: 30%;
+  height: 300px;
+  margin: 10px 10px;
+}
+
+#block section:hover {
+  background-color: #ffffff;
+}
+
+#block p {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/*----------*/ /*----------*/
+/*----------*/ /*----------*/
+
+/*----- PANNEAU D'ADMINISTRATION -----*/
+#profil {
+  display: flex;
+  margin: 0 auto;
+}
+
+#profil td{
+  border: none;
+}
+
+
+#profil-but {
+  display: flex;
+}
+
+#profil-but input[type="button"] {
+  text-align: center;
+}
+
+ 
